@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+h1 {
+  color: #dbd7d2;
+  font-size: xx-large;
+}
+
+h2 {
+  color: #63acf0;
+  font-size: large;
+}
+
+h3 {
+  color: #dbd7d2;
+  font-size: medium;
+}
+
+p {
+  color: #142233;
+}
+
+a {
+  color: #142233;
+}
+a:hover {
+  color: #494947;
+}
+
+* {
+  font-family: Work Sans, sans-serif;
+}
+
+h1 {
+  border: 1px solid #1f931f;
+}/*# sourceMappingURL=style.css.map */

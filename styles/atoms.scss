@@ -1,0 +1,28 @@
+@use "variables";
+
+//h1 atom
+h1 {
+  color: variables.$timber-wolf;
+  font-size: xx-large;
+}
+//h2 atom
+h2 {
+  color: variables.$sky-blue;
+  font-size: large;
+}
+//h3 atom
+h3 {
+  color: variables.$timber-wolf;
+  font-size: medium;
+}
+//p atom
+p {
+  color: variables.$dark-blue;
+}
+//a atom
+a {
+  color: variables.$dark-blue;
+  &:hover {
+    color: variables.$dirt-brown;
+  }
+}

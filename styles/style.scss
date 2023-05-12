@@ -1,0 +1,18 @@
+@use "atoms";
+@use "molecules";
+@use "organisms" as o;
+@use "variables";
+@import
+  url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+* {
+  font-family: Work Sans, sans-serif;
+}
+
+h1 {
+  @include bordered(variables.$forest-green, 1px);
+}

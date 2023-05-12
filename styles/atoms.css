@@ -1,0 +1,25 @@
+h1 {
+  color: #dbd7d2;
+  font-size: xx-large;
+}
+
+h2 {
+  color: #63acf0;
+  font-size: large;
+}
+
+h3 {
+  color: #dbd7d2;
+  font-size: medium;
+}
+
+p {
+  color: #142233;
+}
+
+a {
+  color: #142233;
+}
+a:hover {
+  color: #494947;
+}/*# sourceMappingURL=atoms.css.map */
