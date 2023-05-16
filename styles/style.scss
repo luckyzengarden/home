@@ -2,17 +2,136 @@
 @use "molecules";
 @use "organisms" as o;
 @use "variables";
-@import
-  url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
 @mixin bordered($color, $width) {
   border: $width solid $color;
 }
 
+/**********************************************
+ Global Styles
+***********************************************/
+
 * {
   font-family: Work Sans, sans-serif;
 }
 
+/**********************************************
+ Header
+***********************************************/
+
+header {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    align-self: end;
+    margin-right: 15vw;
+  }
+}
+
 h1 {
   @include bordered(variables.$forest-green, 1px);
+  margin: 0 10vw;
+  position: relative;
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: variables.$dark-blue;
+    width: 9vw;
+    height: 2px;
+  }
+
+  &::before {
+    left: -100px;
+    bottom: 50%;
+  }
+
+  &::after {
+    right: -100px;
+    bottom: 50%;
+  }
+}
+
+/**********************************************
+ Hero Section
+***********************************************/
+// TODO: Figure out what image goes here, this is just a placeholder
+#zen-summary {
+  margin: 200px 0 200px 70vw;
+}
+
+/**********************************************
+ Main Section
+***********************************************/
+#zen-preamble {
+  width: 50%;
+  float: left;
+  border-bottom: 1px solid;
+  height: 50vh;
+}
+
+#zen-explanation {
+  width: 50%;
+  float: right;
+  border-bottom: 1px solid;
+  height: 50vh;
+}
+
+#zen-participation {
+  margin-right: 50%;
+}
+
+#zen-benefits {
+  margin-top: 15%;
+  padding-left: 50vw;
+  border-bottom: 1px solid;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 2px;
+    left: 25vw;
+    top: -50%;
+    background-color: variables.$dark-blue;
+  }
+}
+
+#zen-requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 010px;
+  h3 {
+    grid-column: 1/3;
+  }
+  & p:last-child {
+    grid-column: 1/3;
+    text-align: center;
+  }
+}
+
+/**********************************************
+ Footer
+***********************************************/
+
+footer {
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 20px 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.design-archives{
+  grid-column: 1;
+}
+
+.zen-resources {
+  grid-column: 2;
+  grid-row: 1;
 }
