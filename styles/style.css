@@ -58,11 +58,11 @@ h1::after, h1::before {
   height: 2px;
 }
 h1::before {
-  left: -100px;
+  left: -150px;
   bottom: 50%;
 }
 h1::after {
-  right: -100px;
+  right: -150px;
   bottom: 50%;
 }
 

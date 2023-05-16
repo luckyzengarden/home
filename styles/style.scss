@@ -43,12 +43,12 @@ h1 {
   }
 
   &::before {
-    left: -100px;
+    left: -150px;
     bottom: 50%;
   }
 
   &::after {
-    right: -100px;
+    right: -150px;
     bottom: 50%;
   }
 }
@@ -127,7 +127,7 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
-.design-archives{
+.design-archives {
   grid-column: 1;
 }
 
