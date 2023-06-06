@@ -1,148 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+* {
+  margin: 0;
+}
+
 h1 {
-  color: #dbd7d2;
-  font-size: 75px;
   text-align: center;
+  font-size: 40px;
 }
 
 h2 {
-  color: #63acf0;
-  font-size: large;
+  text-align: right;
 }
 
-h3 {
-  color: #dbd7d2;
-  font-size: medium;
-}
-
-p {
-  color: #142233;
-}
-
-a {
-  color: #142233;
-}
-a:hover {
-  color: #494947;
-}
-
-/**********************************************
- Global Styles
-***********************************************/
-* {
-  font-family: Work Sans, sans-serif;
-}
-
-/**********************************************
- Header
-***********************************************/
-header {
-  display: flex;
-  flex-direction: column;
-}
-header h2 {
-  align-self: end;
-  margin-right: 15vw;
-}
-
-h1 {
-  border: 1px solid #1f931f;
-  margin: 0 10vw;
-  position: relative;
-}
-h1::after, h1::before {
-  position: absolute;
-  content: "";
-  background-color: #142233;
-  width: 9vw;
-  height: 2px;
-}
-h1::before {
-  left: -150px;
-  bottom: 50%;
-}
-h1::after {
-  right: -150px;
-  bottom: 50%;
-}
-
-/**********************************************
- Hero Section
-***********************************************/
-#zen-summary {
-  margin: 200px 0 200px 70vw;
-}
-
-/**********************************************
- Main Section
-***********************************************/
-#zen-preamble {
-  width: 50%;
-  float: left;
-  border-bottom: 1px solid;
-  height: 50vh;
-}
-
-#zen-explanation {
-  width: 50%;
-  float: right;
-  border-bottom: 1px solid;
-  height: 50vh;
-}
-
-#zen-participation {
-  margin-right: 50%;
-}
-
-#zen-benefits {
-  margin-top: 15%;
-  padding-left: 50vw;
-  border-bottom: 1px solid;
-  position: relative;
-}
-#zen-benefits::before {
-  content: "";
-  position: absolute;
-  width: 40vw;
-  height: 2px;
-  left: 25vw;
-  top: -50%;
-  background-color: #142233;
-}
-
-#zen-requirements {
+.intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-#zen-requirements h3 {
-  grid-column: 1/3;
-}
-#zen-requirements p:last-child {
-  grid-column: 1/3;
-  text-align: center;
+  background-color: lightblue;
 }
 
-/**********************************************
- Footer
-***********************************************/
+.summary {
+  text-align: center;
+  width: 255px;
+  justify-self: center;
+  height: 480px;
+}
+
+.preamble {
+  background-color: white;
+}
+
+.preamble, .explanation {
+  height: 400px;
+}
+
+.participation, .benefits {
+  background-color: lightblue;
+}
+
+.participation {
+  height: 900px;
+}
+
+.benefits {
+  height: 500px;
+}
+
+.requirements {
+  height: 800px;
+}
+
 footer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+  height: 70px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  font-size: 20px;
+  list-style: none;
+}
+
+.sidebar {
+  background-color: lightskyblue;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 20px 0;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.design-archives {
-  grid-column: 1;
-}
-
-.zen-resources {
-  grid-column: 2;
-  grid-row: 1;
+  height: 800px;
 }/*# sourceMappingURL=style.css.map */
