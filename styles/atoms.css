@@ -1,17 +1,32 @@
 h1 {
-  color: #dbd7d2;
-  font-size: 75px;
+  display: inline-block;
+  margin: 15px 0 10px;
+  color: #00374f;
+  font-size: 40px;
   text-align: center;
+  background-color: lightblue;
+  padding: 0 10px;
+}
+h1::before {
+  margin-top: 18px;
+  position: absolute;
+  content: "";
+  background-color: #142233;
+  width: 100vw;
+  height: 10px;
+  left: 0;
+  z-index: -1;
 }
 
 h2 {
   color: #63acf0;
   font-size: large;
+  text-align: right;
 }
 
 h3 {
-  color: #dbd7d2;
-  font-size: medium;
+  color: #142233;
+  font-size: 40px;
 }
 
 p {

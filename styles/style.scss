@@ -21,11 +21,10 @@
  Header
 ***********************************************/
 
-
-
 .intro {
   display: grid;
   background-color: lightblue;
+  position: relative;
   z-index: -2;
 
   h2 {
@@ -56,11 +55,13 @@
   background-color: white;
 }
 
-.preamble, .explanation {
+.preamble,
+.explanation {
   height: 400px;
 }
 
-.participation, .benefits {
+.participation,
+.benefits {
   background-color: lightblue;
 }
 
@@ -75,7 +76,6 @@
 .requirements {
   height: 800px;
 }
-
 
 /**********************************************
  Footer
@@ -107,4 +107,3 @@ li {
   text-align: center;
   height: 800px;
 }
-
