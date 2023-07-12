@@ -67,12 +67,57 @@ $shooting-time: 5000ms;
   }
 }
 
+@media screen and (min-width: '1350px') {
+
+  $shooting-time: 5000ms;
+  .intro {
+    overflow:hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      top: -30px;
+      // width: 100px;
+      transform: rotate(90deg);
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgb(219, 117, 70),
+        rgba(0, 0, 255, 0)
+      );
+      border-radius: 999px;
+      filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+      animation: tail $shooting-time ease-in-out infinite,
+        shooting $shooting-time ease-in-out infinite;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -60px;
+      top: -30px;
+      // width: 100px;
+      transform: rotate(90deg);
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgb(219, 117, 70),
+        rgba(0, 0, 255, 0)
+      );
+      border-radius: 999px;
+      filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+      animation: tail 3000ms ease-in-out infinite,
+        shooting 3000ms ease-in-out infinite;
+    }
+  }
+}
+
 @media screen and (min-width: variables.$mobile-breakpoint) {
   body {
     background-position: 50% 40%;
   }
   $shooting-time: 5000ms;
   .intro {
+    overflow: hidden;
     &::after {
       content: "";
       position: absolute;
