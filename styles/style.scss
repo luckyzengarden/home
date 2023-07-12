@@ -18,12 +18,11 @@
 }
 
 body {
-  overflow-x: hidden;
-
   background-image: url("../images/mountains.svg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: 50% 40%;
+  background-position: 50% 200px;
+  background-repeat: no-repeat;
 }
 
 /**********************************************
@@ -35,42 +34,13 @@ $shooting-time: 5000ms;
   background-color: variables.$night-sky;
   position: relative;
   z-index: -2;
-  background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 59%,
-    rgba(162, 162, 162, 0.3393732492997199) 81%,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(162, 162, 162, 0.3393732492997199) 85%,
     rgba(255, 255, 255, 0) 100%
   );
-  &::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    top: -30px;
-    // width: 100px;
-    transform: rotate(90deg);
-    height: 2px;
-    background: linear-gradient(-45deg, rgb(219, 117, 70), rgba(0, 0, 255, 0));
-    border-radius: 999px;
-    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
-    animation: tail $shooting-time ease-in-out infinite,
-      shooting $shooting-time ease-in-out infinite;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    left: -60px;
-    top: -30px;
-    // width: 100px;
-    transform: rotate(90deg);
-    height: 2px;
-    background: linear-gradient(-45deg, rgb(219, 117, 70), rgba(0, 0, 255, 0));
-    border-radius: 999px;
-    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
-    animation: tail 3000ms ease-in-out infinite,
-      shooting 3000ms ease-in-out infinite;
-  }
   header {
     grid-column: 1/3;
   }
@@ -83,7 +53,64 @@ $shooting-time: 5000ms;
     max-width: 310px;
   }
 
-  @media screen and (min-width: variables.$mobile-breakpoint) {
+  .preamble,
+  .summary {
+    h3 {
+      color: variables.$sky-blue;
+    }
+    p {
+      color: variables.$sky-blue;
+    }
+    a {
+      color: variables.$sky-blue;
+    }
+  }
+}
+
+@media screen and (min-width: variables.$mobile-breakpoint) {
+  body {
+    background-position: 50% 40%;
+  }
+  $shooting-time: 5000ms;
+  .intro {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      top: -30px;
+      // width: 100px;
+      transform: rotate(90deg);
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgb(219, 117, 70),
+        rgba(0, 0, 255, 0)
+      );
+      border-radius: 999px;
+      filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+      animation: tail $shooting-time ease-in-out infinite,
+        shooting $shooting-time ease-in-out infinite;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -60px;
+      top: -30px;
+      // width: 100px;
+      transform: rotate(90deg);
+      height: 2px;
+      background: linear-gradient(
+        -45deg,
+        rgb(219, 117, 70),
+        rgba(0, 0, 255, 0)
+      );
+      border-radius: 999px;
+      filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+      animation: tail 3000ms ease-in-out infinite,
+        shooting 3000ms ease-in-out infinite;
+    }
+
+    // Earth
     .preamble::after {
       display: block;
     }
@@ -102,7 +129,6 @@ $shooting-time: 5000ms;
   text-align: center;
   width: 255px;
   justify-self: center;
-  // background-color: yellow;
   height: 480px;
   margin-top: 35px;
 }
@@ -113,17 +139,19 @@ $shooting-time: 5000ms;
 
 #zen-supporting {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .preamble {
   // background-image: linear-gradient(rgba(0,0,0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   position: relative;
-  height: 600px;
+  height: 800px;
+  padding: 10px;
   &::after {
-    top: -200px;
+    top: -300px;
     position: absolute;
-    right: 20px;
+    right: 80px;
+    z-index: 1;
     display: none;
     content: "";
     width: 300px;
@@ -157,20 +185,21 @@ $shooting-time: 5000ms;
   }
 }
 
-.preamble {
-  padding: 10px;
-  background-color: transparent;
+.explanation {
+  grid-row: 1;
+  z-index: -2;
+  position: relative;
 }
 
-.explanation {
-  z-index: -2;
-  // background: rgb(78, 104, 112);
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(78, 104, 112, 1) 0%,
-  //   variables.$pale-blue 100%
-  // );
-  position: relative;
+.participation {
+  grid-row: 2;
+}
+.benefits {
+  grid-row: 3;
+}
+
+.requirements {
+  grid-row: 4;
 }
 
 .explanation,
@@ -183,10 +212,10 @@ $shooting-time: 5000ms;
   }
 }
 
-.participation {
-}
-
 @media screen and (min-width: variables.$mobile-breakpoint) {
+  #zen-supporting {
+    grid-template-columns: 1fr 1fr;
+  }
   .explanation {
     padding-left: 50%;
   }
@@ -203,6 +232,7 @@ $shooting-time: 5000ms;
 
   .explanation,
   .participation {
+    grid-row: 1;
     background: rgb(171, 247, 247);
     background: linear-gradient(
       180deg,
@@ -213,6 +243,7 @@ $shooting-time: 5000ms;
 
   .benefits,
   .requirements {
+    grid-row: 2;
     background: rgb(102, 203, 101);
     background: linear-gradient(
       180deg,
@@ -274,7 +305,7 @@ footer {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  background-color: darkblue;
+  background-color: variables.$dirt-brown;
   height: 70px;
   grid-column: 1/3;
 }
@@ -284,8 +315,12 @@ footer a {
   text-decoration: none;
 }
 
-.wrapper a {
-  text-decoration: none;
+.wrapper {
+  li,
+  h3,
+  a {
+    color: white;
+  }
 }
 
 .wrapper {
@@ -300,7 +335,7 @@ li {
 }
 
 .sidebar {
-  background-color: lightskyblue;
+  background-color: variables.$dirt-brown;
   // display: flex;
   // justify-content: center;
   // text-align: center;
