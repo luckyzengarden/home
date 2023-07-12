@@ -69,6 +69,8 @@ body {
   background-color: #0c1011;
   position: relative;
   z-index: -2;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 59%, rgba(162, 162, 162, 0.3393732493) 81%, rgba(255, 255, 255, 0) 100%);
 }
 .intro::after {
   content: "";
@@ -133,8 +135,8 @@ body {
 }
 
 .preamble {
-  background-color: white;
   position: relative;
+  height: 600px;
 }
 .preamble::after {
   top: -200px;
@@ -155,9 +157,7 @@ body {
 
 .preamble {
   padding: 10px;
-  background-color: #0c1011;
-  background: rgb(12, 16, 17);
-  background: linear-gradient(180deg, rgb(12, 16, 17) 0%, rgb(254, 255, 255) 100%);
+  background-color: transparent;
 }
 
 .explanation {
@@ -326,7 +326,7 @@ li {
     transform: translate(0, 0) rotate(35deg);
   }
   100% {
-    left: 9;
+    left: 1;
     transform: translate(1200px, 630px) rotate(35deg);
   }
 }
