@@ -25,6 +25,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.page-wrapper {
+  overflow: hidden;
+}
+
 /**********************************************
  Header
 ***********************************************/
@@ -67,11 +71,10 @@ $shooting-time: 5000ms;
   }
 }
 
-@media screen and (min-width: '1350px') {
-
+@media screen and (min-width: "1350px") {
   $shooting-time: 5000ms;
   .intro {
-    overflow:hidden;
+    overflow: hidden;
     &::after {
       content: "";
       position: absolute;
@@ -270,7 +273,7 @@ $shooting-time: 5000ms;
   .benefits,
   .requirements {
     background-color: rgba(219, 117, 70, 0.8);
-    margin: 80px;
+    margin: 10px;
     padding: 20px;
     border-radius: 8px;
   }
@@ -313,6 +316,7 @@ $shooting-time: 5000ms;
 
     h3 {
       grid-row: 1;
+      grid-column: 1/3;
     }
     p {
       grid-row: 2;
@@ -338,6 +342,15 @@ $shooting-time: 5000ms;
       grid-column: 1/3;
       grid-row: 4;
     }
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    margin: 30px;
   }
 }
 
@@ -369,6 +382,7 @@ footer a {
 }
 
 .wrapper {
+  padding-bottom: 20px;
   ul {
     padding-left: 10px;
   }
